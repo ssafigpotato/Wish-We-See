@@ -1,3 +1,3 @@
 # 서울 특화 2반 2팀
 
-develop branch 입니다.
+BACKEND: 고동연 윤서영 이주형
