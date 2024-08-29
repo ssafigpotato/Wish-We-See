@@ -1,0 +1,16 @@
+FROM /Users/SSAFY/Desktop/workspace/model/ggml-model-Q4_K_M.gguf
+
+TEMPLATE """### User:
+{{ .Prompt }}
+
+### Assistant:
+"""
+
+PARAMETER temperature 0.1
+PARAMETER num_ctx 4096
+
+# Multiple stop conditions combined into a list
+PARAMETER stop "</s>"
+PARAMETER stop "### System:"
+PARAMETER stop "### User:"
+PARAMETER stop "### Assistant:"
