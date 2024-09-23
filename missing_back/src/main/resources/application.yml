@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: missing_back
+
+logging:
+  level:
+    org:
+      springframework: DEBUG
