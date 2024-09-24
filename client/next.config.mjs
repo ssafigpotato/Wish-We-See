@@ -8,6 +8,7 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(import.meta.url, "styles")],
   },
+  productionBrowserSourceMaps: false,
 };
 
 export default nextPwa({
