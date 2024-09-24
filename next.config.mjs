@@ -1,11 +1,15 @@
-import nextPwa from 'next-pwa';
+import nextPwa from "next-pwa";
+import path from "path";
 
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-    reactStrictMode: true,
+  reactStrictMode: true,
+  sassOptions: {
+    includePaths: [path.join(import.meta.url, "styles")],
+  },
 };
 
 export default nextPwa({
-    dest:'public'
+  dest: "public",
 })(nextConfig);
