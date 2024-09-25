@@ -1,0 +1,24 @@
+.button {
+  // 테스트
+  background-color: blue;
+  color: #ffffff;
+  border: 1px dashed #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.small {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.medium {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.large {
+  font-size: 20px;
+  padding: 15px 30px;
+}
