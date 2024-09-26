@@ -1,4 +1,4 @@
-package com.ssafy.missing_back.global.error;
+package com.ssafy.missing_back.global.error.exception;
 
 import org.springframework.http.HttpStatus;
 
