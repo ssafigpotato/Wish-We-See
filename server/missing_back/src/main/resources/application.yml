@@ -1,8 +1,3 @@
-spring:
-  application:
-    name: missing_back
-
-logging:
-  level:
-    org:
-      springframework: DEBUG
+version https://git-lfs.github.com/spec/v1
+oid sha256:d376cb2e92ed3cbbb9e45a208c8d6795c5665ab643cedd9a61c56bb96db68a1e
+size 813
