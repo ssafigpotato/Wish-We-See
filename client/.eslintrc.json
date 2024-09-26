@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:23de98695d64457c83b693f1fcae16090ede2c232b4034b754ce9591264c189b
-size 109
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:storybook/recommended"
+  ]
+}
