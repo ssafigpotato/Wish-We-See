@@ -1,13 +1,3 @@
-package com.ssafy.missing_back;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class MissingBackApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(MissingBackApplication.class, args);
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e0b26b08982d51cdd0d9a153bb8d90bad2ce3427e3b6b8f23e518d7dde1dbcb
+size 417
