@@ -1,16 +1,3 @@
-package com.ssafy.missing_back.domain.users.controller;
-
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.ssafy.missing_back.domain.users.service.UserService;
-
-import lombok.RequiredArgsConstructor;
-
-@RestController
-@RequiredArgsConstructor
-@RequestMapping("/users")
-public class UserController {
-
-	private final UserService userService;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:294a09472bb338b21d12e7d78b17f12b6128e6e306b052ab5fddbb322722e7a7
+size 1245
