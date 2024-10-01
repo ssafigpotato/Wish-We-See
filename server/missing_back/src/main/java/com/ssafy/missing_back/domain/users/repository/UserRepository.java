@@ -9,4 +9,6 @@ import com.ssafy.missing_back.domain.users.model.entity.User;
 public interface UserRepository extends JpaRepository<User, Long> {
 
 	Optional<User> findByLoginId(String loginId);
+
+	Optional<User> findByPhone(String phone);
 }
