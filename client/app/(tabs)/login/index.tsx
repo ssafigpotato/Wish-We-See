@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7e6692e27a3e25a80cddb133e77a295f37f16c2c350975bad3a258a7b713f344
-size 333
+import { View, Text, Button } from 'react-native';
+import { useRouter } from 'expo-router';
+
+export default function LoginScreen() {
+
+    const router = useRouter();
+
+  return (
+    <View>
+          <Text>Login</Text>
+           <Button title="Go to 회원가입" onPress={() => router.push('/login/register')} />
+    </View>
+  );
+}

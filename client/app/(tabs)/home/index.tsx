@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:44e19cee15ac2383fe9de19e5c2098389a08f59ede702523cf5f5a8d8e4b2e9f
-size 374
+import { View } from 'react-native';
+import styled from 'styled-components/native';
+
+const TextTest = styled.Text`
+  color: ${(props) => props.theme.colors.lightBlue};
+  font-family: ${(props) => props.theme.fonts.PretendardBold};
+  font-size: 30px;
+`
+
+export default function HomeScreen() {
+  return (
+    <View>
+      <TextTest>홈입니다.</TextTest>
+    </View>
+  );
+}
