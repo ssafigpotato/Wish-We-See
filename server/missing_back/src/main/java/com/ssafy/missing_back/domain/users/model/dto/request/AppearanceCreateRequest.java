@@ -1,23 +1,3 @@
-package com.ssafy.missing_back.domain.users.model.dto.request;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-public class AppearanceCreateRequest {
-
-	@Setter
-	@JsonProperty("img_url")
-	private String imgUrl;
-
-	@JsonProperty("top_color")
-	private String topColor;
-
-	@JsonProperty("bottom_color")
-	private String bottomColor;
-
-	private String detail;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf5b6aef428d0ee8fb180b3c76adb9b9a0a9789066cfdfb6864529bea73f0847
+size 756
