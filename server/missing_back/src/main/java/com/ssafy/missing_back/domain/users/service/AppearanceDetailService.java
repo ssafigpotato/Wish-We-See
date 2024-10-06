@@ -8,5 +8,6 @@ import com.ssafy.missing_back.domain.users.model.dto.request.AppearanceCreateReq
 
 public interface AppearanceDetailService {
 
-	void createAppearanceDetail(AppearanceCreateRequest appearanceCreateRequest, MultipartFile image) throws IOException;
+	void createAppearanceDetail(AppearanceCreateRequest appearanceCreateRequest, MultipartFile image) throws
+		IOException;
 }
