@@ -1,0 +1,21 @@
+@import "@/assets/styles/styles.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: $black;
+  font-weight: $semi-bold-weight;
+  font-size: 20px;
+  //   height: 20rem;
+  padding: 10px;
+
+  * {
+    border: 1px solid pink;
+  }
+  .title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
