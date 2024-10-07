@@ -1,10 +1,11 @@
 import styles from "./mypage.module.scss";
+import BasicInfo from "./_component/_basicinfo/basicinfo";
 
 export default function Mypage() {
   return (
     <div className={styles.container}>
       <div className={styles.title}>기본 정보</div>
-      <div> 기본 정보 카드 </div>
+      <BasicInfo />
 
       <div className={styles.title}>인상 착의</div>
       <div> 인상착의 카드 </div>
