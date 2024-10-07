@@ -1,4 +1,4 @@
-import Map from "@/app/friend/[id]/_component/Map"
+import KakaoMap from "@/app/friend/[id]/_component/KakaoMap"
 
 import styles from "@/app/friend/[id]/page.module.scss";
 export default function Location () {
@@ -8,7 +8,7 @@ export default function Location () {
         <p className={styles['location-text']}>강남구 역삼동 근처</p>
         <p className={styles['location']}>마지막 위치</p>
       </div>
-      <Map />
+      <KakaoMap />
     </div>
   )
 }
