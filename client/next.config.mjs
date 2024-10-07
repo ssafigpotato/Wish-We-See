@@ -1,16 +1,3 @@
-import nextPwa from "next-pwa";
-import path from "path";
-
-/** @type {import('next').NextConfig} */
-
-const nextConfig = {
-  reactStrictMode: true,
-  sassOptions: {
-    includePaths: [path.join(import.meta.url, "styles")],
-  },
-  productionBrowserSourceMaps: false,
-};
-
-export default nextPwa({
-  dest: "public",
-})(nextConfig);
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e9f04a4fc754d63fdc057d77913ec7eaf0ee65bca73bf1cc0e45fc204cc999e
+size 630
