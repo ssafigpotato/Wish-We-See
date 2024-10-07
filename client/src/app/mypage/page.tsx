@@ -1,16 +1,3 @@
-import styles from "./mypage.module.scss";
-import BasicInfo from "./_component/_basicinfo/basicinfo";
-import Clothes from "./_component/_clothes/clothes";
-
-export default function Mypage() {
-  return (
-    <div className={styles.container}>
-      <div className={styles.title}>기본 정보</div>
-      <BasicInfo />
-      <div className={styles.title}>인상 착의</div>
-      <Clothes />
-      <div className={styles.title}>지인 정보</div>
-      <div>이름 전화번호~~</div>
-    </div>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0175cef81ca57cf9a8b47bfe7a0e9aa0718201a055914abac1e6bb4598c848ee
+size 552
