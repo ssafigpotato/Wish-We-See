@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:06b2adab4a7fbfa2743937ff75be84a7ea0a3e493cf11476868454ec6c3fd75a
-size 47
+@import "./reset.css";
+@import "./global.css";

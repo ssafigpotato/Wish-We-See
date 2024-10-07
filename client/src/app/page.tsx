@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b08bc0cddbe50082d12189041d04ab139422f18da9b6a4c6fa5d2ebb15b51289
-size 284
+"use client";
+
+import styles from "./page.module.scss";
+import Main from "./home/page";
+import { usePermissions } from "@/hooks/usePermissions";
+
+export default function Home() {
+
+  usePermissions();
+
+  return (
+    <div className={styles.test}>
+      <Main></Main>
+    </div>
+  );
+}
