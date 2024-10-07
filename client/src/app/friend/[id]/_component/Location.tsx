@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f017922d6f4095f87f682b39ac3c152781f27b6d37c105d9aca79c6f28215e0c
-size 456
+import KakaoMap from "@/app/friend/[id]/_component/KakaoMap"
+
+import styles from "@/app/friend/[id]/page.module.scss";
+export default function Location () {
+  return (
+    <div className={styles['location-container']}>
+      <div className={styles['location-info']}>
+        <p className={styles['location-text']}>강남구 역삼동 근처</p>
+        <p className={styles['location']}>마지막 위치</p>
+      </div>
+      <KakaoMap />
+    </div>
+  )
+}

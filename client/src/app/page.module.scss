@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0f31a5ca3c519fa20259daea54d3fa7ac7933fb0e66b935d80b5099a813990ba
-size 103
+@import '@/assets/styles/styles.scss';
+
+.test {
+    color: $blue;
+    font-weight: $semi-bold-weight;
+}
