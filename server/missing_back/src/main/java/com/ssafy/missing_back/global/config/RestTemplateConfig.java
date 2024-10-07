@@ -1,15 +1,3 @@
-package com.ssafy.missing_back.global.config;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.client.RestTemplate;
-
-@Configuration
-public class RestTemplateConfig {
-
-	@Bean
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d03a8a14c830eb684199db26bd658d6b8341c7eb7ae2a8635c32c53e452516f8
+size 617
