@@ -1,5 +1,6 @@
 import "@/assets/styles/index.css";
 import { SensorProvider } from "@/context/useSensorContext";
+import { UserProvider } from "@/context/useUserContext";
 
 export const metadata = {
   title: "Next.js",
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <SensorProvider>{children}</SensorProvider>
+        <SensorProvider>
+          <UserProvider>{children}</UserProvider>
+        </SensorProvider>
       </body>
     </html>
   );
