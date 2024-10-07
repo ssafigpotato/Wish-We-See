@@ -2,10 +2,15 @@ package com.ssafy.missing_back.domain.cautions.model.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
-public class VoiceReqest {
+@Builder
+@AllArgsConstructor
+public class VoiceRequest {
 
-	@JsonProperty("")
+	@JsonProperty("file_url")
+	private String fileUrl;
 }
