@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1cf07234977b4de7c857dbd0f102d800f1b467decc40b812a96c5ca6b8de5c44
-size 370
+package com.ssafy.missing_back.domain.missing_persons.service;
+
+import java.util.List;
+
+import com.ssafy.missing_back.domain.missing_persons.model.dto.response.MissingPersonDetailResponse;
+
+public interface MissingPersonService {
+
+	List<MissingPersonDetailResponse> getAllMissingPersonDetails();
+
+	MissingPersonDetailResponse getMissingPersonDetail(Long situationId);
+}
