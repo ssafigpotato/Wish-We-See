@@ -1,20 +1,3 @@
-package com.ssafy.missing_back.domain.cautions.model.dto.response;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import lombok.Builder;
-import lombok.Getter;
-
-@Getter
-@Builder
-public class VoiceResultResponse {
-
-	@JsonProperty("classification")
-	private String classification;
-
-	public static VoiceResultResponse toDto(String classification) {
-		return VoiceResultResponse.builder()
-			.classification(classification)
-			.build();
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b139478a723fff4434614b2c3433418b933fe0b00cc9a2424dd241bd5e95d510
+size 500
