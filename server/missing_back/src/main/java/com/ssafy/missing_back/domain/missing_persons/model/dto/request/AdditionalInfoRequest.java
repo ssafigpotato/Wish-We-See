@@ -20,5 +20,4 @@ public class AdditionalInfoRequest {
 	@JsonProperty("additional_content")
 	private String additionalContent;
 
-
 }
