@@ -1,10 +1,3 @@
-import styles from "@/app/friend/[id]/page.module.scss";
-
-export default function Button() {
-  return (
-    <div className={styles['button-container']}>
-      <div className={styles['red-button']}>종료</div>
-      <div className={styles['blue-button']}>다음 단계</div>
-    </div>
-  )
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f5a04e46542792be43b8fc9a1649da9605ecdaaf6e26fec24fd2e25b92d501a
+size 291

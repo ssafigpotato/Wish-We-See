@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1e05ed7428649f0bd5ea7b509daf248b3c3dc43c01d4d0776e0cfa462343b48c
-size 460
+@import '@/assets/styles/styles.scss';
+
+.container {
+    width: 310px;
+    height: 60px;
+    border-bottom: 1px solid; // 하단 테두리만 적용
+    display: flex;
+    align-items: center;
+    color: $blue;
+}
+
+.input {
+    border: none; // 모든 테두리 제거
+    height: 100%;
+    width: 100%;
+    font-size: 24px;
+    margin-left: 10px;
+    background-color: transparent; // 배경을 투명하게 설정
+
+    &:focus {
+        outline: none;
+    }
+}
