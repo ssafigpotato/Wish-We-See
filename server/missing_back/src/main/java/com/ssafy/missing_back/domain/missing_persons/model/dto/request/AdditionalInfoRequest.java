@@ -1,23 +1,3 @@
-package com.ssafy.missing_back.domain.missing_persons.model.dto.request;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Builder
-public class AdditionalInfoRequest {
-
-	@JsonProperty("missing_person_id")
-	private Long missingPersonId;
-
-	@Setter
-	@JsonProperty("additional_img_url")
-	private String additionalImgUrl;
-
-	@JsonProperty("additional_content")
-	private String additionalContent;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:67740f91c3684a2fbc7acab4a5c710f24dff04d863a7a3adf3b3b59bf08b8b1d
+size 824
