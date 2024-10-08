@@ -1,21 +1,3 @@
-"use client";
-
-import styles from "./page.module.scss";
-import Main from "./home/page";
-import { usePermissions } from "@/hooks/usePermissions";
-import Header from "@/components/Header/Header"
-import HeaderArea from "@/components/Header/HeaderArea";
-export default function App() {
-
-  usePermissions();
-
-  return (
-    <>
-      <HeaderArea />
-      <div className={styles.test}>
-        <Header />
-        <Main></Main>
-      </div>
-    </>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b71f61d830ace2a3a79bc9ff46ed3eecbe28d0bf0c00d97cceecdbe545ff53c
+size 449
