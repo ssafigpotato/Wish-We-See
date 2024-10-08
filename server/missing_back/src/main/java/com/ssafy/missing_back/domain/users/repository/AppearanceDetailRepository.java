@@ -7,4 +7,6 @@ import com.ssafy.missing_back.domain.users.model.entity.AppearanceDetail;
 public interface AppearanceDetailRepository extends JpaRepository<AppearanceDetail, Long> {
 
 	boolean existsByUserId(Long userId);
+
+	void deleteByUserId(Long userId);
 }
