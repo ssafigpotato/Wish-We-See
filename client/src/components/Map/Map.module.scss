@@ -1,0 +1,27 @@
+@import "@/assets/styles/styles.scss";
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .location-info {
+    display: flex;
+    justify-content: space-between;
+
+    .location-text {
+      font-size: 18px;
+      font-weight: $light-weight;
+    }
+
+    .location {
+      font-size: 15px;
+      font-weight: $light-weight;
+    }
+  }
+}
+
+.map-container {
+  width: 100%;
+  box-sizing: border-box;
+}
