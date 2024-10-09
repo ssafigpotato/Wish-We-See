@@ -1,19 +1,3 @@
-package com.ssafy.missing_back.domain.cautions.model.dto.request;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-
-@Getter
-@Builder
-@AllArgsConstructor
-public class GpsRequest {
-
-	@JsonProperty("location_latitude")
-	private String locationLatitude;
-
-	@JsonProperty("location_longitude")
-	private String locationLongitude;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9597466d5e42fd9a66f8c64b59a5fa1b6afae84ecd7739561b8df06c83e9f6b5
+size 411
