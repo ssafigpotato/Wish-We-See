@@ -1,22 +1,16 @@
-@import "@/assets/styles/styles.scss";
+@import '@/assets/styles/styles.scss';
 
-.container {
+.container{
   padding: 0px 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.main-container {
+.main-container{
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding-top: 4.5rem;
   padding-bottom: 16px;
-}
-
-.button-gap {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
 }

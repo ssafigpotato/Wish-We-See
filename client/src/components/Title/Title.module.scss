@@ -1,0 +1,20 @@
+@import "@/assets/styles/styles.scss";
+
+.title {
+  font-weight: $bold-weight;
+}
+
+.title-h1 {
+  @extend .title;
+  font-size: 32px;
+}
+
+.title-h2 {
+  @extend .title;
+  font-size: 24px;
+}
+
+.title-h3 {
+  @extend .title;
+  font-size: 16px;
+}

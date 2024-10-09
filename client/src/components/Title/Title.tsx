@@ -1,4 +1,4 @@
-import styles from "@/app/friend/[id]/page.module.scss";
+import styles from "@/components/Title/Title.module.scss";
 
 interface TitleProps {
   name: string;
