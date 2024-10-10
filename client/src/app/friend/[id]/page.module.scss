@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:924347d5264de4b293307f4afa658d925645820cd988ac2429fc3d1a56ae7921
-size 329
+@import "@/assets/styles/styles.scss";
+
+.container {
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4.5rem;
+  padding-bottom: 16px;
+}
+
+.button-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}

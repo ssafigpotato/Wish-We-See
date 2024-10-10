@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:22116d299566071f1f7dc6fd6bdbd9324bfe6f1e594c9e7264034ee8338ade6d
-size 427
+import FreindInfoAdd from "@/app/friend/add/[id]/page";
+import Header from "@/components/Header/Header";
+
+import styles from "@/app/friend/add/[id]/page.module.scss";
+import HeaderArea from "@/components/Header/HeaderArea";
+
+export default function FreindInfoAddPage() {
+  return (
+    <>
+      <HeaderArea />
+      <div className={styles["container"]}>
+        <Header />
+        <FreindInfoAdd />
+      </div>
+    </>
+  );
+}
