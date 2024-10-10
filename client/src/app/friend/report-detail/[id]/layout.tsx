@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:da1c885013953330491b6a4f3ee50fd2137a5505dd16c1e3aaceca2b6cc978f7
-size 394
+import Header from "@/components/Header/Header";
+
+import styles from "./page.module.scss";
+import HeaderArea from "@/components/Header/HeaderArea";
+import ReportDetailPage from "./page";
+
+export default function ReportDetailLayout() {
+  return (
+    <>
+      <HeaderArea />
+      <div className={styles["container"]}>
+        <Header />
+        <ReportDetailPage />
+      </div>
+    </>
+  );
+}
