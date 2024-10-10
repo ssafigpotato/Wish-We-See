@@ -1,21 +1,3 @@
-package com.ssafy.missing_back.global.auth.jwt.dto;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import lombok.Builder;
-import lombok.Getter;
-
-@Getter
-@Builder
-public class JwtToken {
-
-	@JsonProperty("grant_type")
-	private String grantType; //  Bearer
-
-	@JsonProperty("access_token")
-	private String accessToken;
-
-	@JsonProperty("refresh_token")
-	private String refreshToken;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5cc0f21b42b9c517a5841d19126ff2a4abea2e94d3b72296e48a52e5f9325f08
+size 390

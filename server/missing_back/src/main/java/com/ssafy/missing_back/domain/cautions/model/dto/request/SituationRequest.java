@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4260f103fad4c26427f8ad867ebae921f8b69eaad113149006e44c83c959f1d5
-size 373
+package com.ssafy.missing_back.domain.cautions.model.dto.request;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class SituationRequest {
+	@JsonProperty("user_id")
+	private Long userId;
+}
