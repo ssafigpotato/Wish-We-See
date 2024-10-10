@@ -1,16 +1,16 @@
-import FreindReportList from "@/app/friend/report/[id]/page";
 import Header from "@/components/Header/Header";
 
-import styles from "@/app/friend/report/[id]/page.module.scss";
+import styles from "./page.module.scss";
 import HeaderArea from "@/components/Header/HeaderArea";
+import ReportDetailPage from "./page";
 
-export default function FreindReportListPage() {
+export default function ReportDetailLayout() {
   return (
     <>
       <HeaderArea />
       <div className={styles["container"]}>
         <Header />
-        <FreindReportList/>
+        <ReportDetailPage />
       </div>
     </>
   );
