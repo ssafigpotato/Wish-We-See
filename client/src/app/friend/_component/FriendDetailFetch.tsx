@@ -1,14 +1,3 @@
-import axiosInstance from "@/app/api/axiosInstance";
-
-const fetchFriendDetail = async (situation_id: number) => {
-  try {
-    const response = await axiosInstance.get(`/missing-persons/?situation_id=${situation_id}`);
-    console.log("서버 응답:", response.data);
-    return response.data;
-  } catch (error) {
-    console.error("GET 요청 오류:", error);
-    throw error;
-  }
-};
-
-export default fetchFriendDetail;
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ed2f0e73ada979842a0c5d33b88f3afa0c93c06a1297bc86c33a9c6b34b033f
+size 421

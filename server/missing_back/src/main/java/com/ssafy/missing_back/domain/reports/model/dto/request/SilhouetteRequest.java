@@ -1,17 +1,3 @@
-package com.ssafy.missing_back.domain.reports.model.dto.request;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
-import lombok.Builder;
-import lombok.Getter;
-
-@Getter
-@Builder
-public class SilhouetteRequest {
-
-	@JsonProperty("image_url")
-	private String imageUrl;
-
-	@JsonProperty("situation_id")
-	private Long situationId;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:88bdc0f6392d9d7d7901d2a3e8191fdeffc70f7d1df00acbdf4bec31ef2e9463
+size 333
