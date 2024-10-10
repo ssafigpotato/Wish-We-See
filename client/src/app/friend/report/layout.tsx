@@ -1,7 +1,7 @@
-import FreindReportList from "@/app/friend/report/[id]/page";
+import FreindReportList from "@/app/friend/report/page";
 import Header from "@/components/Header/Header";
 
-import styles from "@/app/friend/report/[id]/page.module.scss";
+import styles from "@/app/friend/report/page.module.scss";
 import HeaderArea from "@/components/Header/HeaderArea";
 
 export default function FreindReportListPage() {
@@ -10,7 +10,7 @@ export default function FreindReportListPage() {
       <HeaderArea />
       <div className={styles["container"]}>
         <Header />
-        <FreindReportList/>
+        <FreindReportList />
       </div>
     </>
   );
