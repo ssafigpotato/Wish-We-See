@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4c42a1a8f948b2167a92f044bcb8a5bcb105c6a19824f5019057ddd0e27d92e1
-size 422
+import axiosInstance from "@/app/api/axiosInstance";
+
+
+const fetchReportExit = async (id:number) => {
+  try {
+    const response = await axiosInstance.post('/missing-persons/add', {
+      user_id : id
+    })
+    console.log('서버 응답:', response.status);
+    return response.status === 201;
+  } catch (error) {
+    console.error('POST 요청 오류:', error);
+    throw error;
+  }
+};
+
+export default fetchReportExit;
