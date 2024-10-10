@@ -1,38 +1,41 @@
-# react-dockerizing/Dockerfile
+# Dockerfile 
 
-# base image 설정(as build 로 완료된 파일을 밑에서 사용할 수 있다.)
-FROM node:18-alpine as build
+FROM node:18-alpine AS base
 
-# 컨테이너 내부 작업 디렉토리 설정
+# Install dependencies only when needed
+FROM base AS deps
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# app dependencies
-# 컨테이너 내부로 package.json 파일들을 복사
+# Install dependencies based on the preferred package manager
 COPY package*.json ./
+RUN npm install --force
+RUN npm install sharp
+RUN rm -rf ./.next/cache
 
-# package.json 및 package-lock.json 파일에 명시된 의존성 패키지들을 설치
-RUN npm install
-
-# 호스트 머신의 현재 디렉토리 파일들을 컨테이너 내부로 전부 복사
+# Rebuild the source code only when needed
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# npm build
 RUN npm run build
 
-# prod environment
-FROM nginx:stable-alpine
+# Production image, copy all the files and run next
+FROM base AS runner
+WORKDIR /app
 
-# 이전 빌드 단계에서 빌드한 결과물을 /usr/share/nginx/html 으로 복사한다.
-COPY --from=build /app/build /usr/share/nginx/html
+ENV NODE_ENV=production
+ENV PORT 5000
 
-# 기본 nginx 설정 파일을 삭제한다. (custom 설정과 충돌 방지)
-RUN rm /etc/nginx/conf.d/default.conf
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
 
-# custom 설정파일을 컨테이너 내부로 복사한다.
-COPY nginx/nginx.conf /etc/nginx/conf.d
+COPY --from=builder /app/public ./public/
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-# 컨테이너의 80번 포트를 열어준다.
-EXPOSE 80
+USER nextjs
 
-# nginx 서버를 실행하고 백그라운드로 동작하도록 한다.
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 5000
+
+CMD ["node", "server.js"]
