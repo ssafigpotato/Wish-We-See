@@ -1,13 +1,3 @@
-package com.ssafy.missing_back.domain.users.service;
-
-import java.io.IOException;
-
-import org.springframework.web.multipart.MultipartFile;
-
-import com.ssafy.missing_back.domain.users.model.dto.request.AppearanceCreateRequest;
-
-public interface AppearanceDetailService {
-
-	void createAppearanceDetail(AppearanceCreateRequest appearanceCreateRequest, MultipartFile image) throws
-		IOException;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:73006bcdfe85dfd3e96b27ea2a21ecdc0ce722ba18986b5c76bc6a7dbd5fb3bd
+size 394

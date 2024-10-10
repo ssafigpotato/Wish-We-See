@@ -1,3 +1,3 @@
-# 서울 특화 2반 2팀
-
-BACKEND: 고동연 윤서영 이주형
+version https://git-lfs.github.com/spec/v1
+oid sha256:91df7c73fbaf55c4fc5854ccc696694d8e9defac3fc633d243ddfe23f319a2b9
+size 65
