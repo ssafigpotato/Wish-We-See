@@ -2,7 +2,7 @@ import axiosInstance from "@/app/api/axiosInstance";
 
 const fetchFriendDetail = async (situation_id: number) => {
   try {
-    const response = await axiosInstance.get(`/missing-persons/?situation_id=${situation_id}`);
+    const response = await axiosInstance.get(`/missing-persons?situation_id=${situation_id}`);
     console.log("서버 응답:", response.data);
     return response.data;
   } catch (error) {
