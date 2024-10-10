@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8cdc76acf8b3e5e956778ee803a3fe94aafb74dc5b7b29536ba181864ec12f15
-size 375
+// 위치 정보 가져오기
+const getLocation = (): Promise<GeolocationPosition | null> => {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => resolve(position),
+      (error) => {
+        console.error('Error fetching location:', error);
+        reject(null);
+      }
+    );
+  });
+};
+
+export default getLocation;
