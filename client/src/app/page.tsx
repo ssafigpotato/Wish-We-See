@@ -9,7 +9,6 @@ import HeaderArea from "@/components/Header/HeaderArea";
 export default function App() {
 
   usePermissions();
-
   return (
     <>
       <HeaderArea />
