@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f289626a39a1643cba09724646cafdb5cd196bd125b27aae921e8a6e1bb6a404
-size 426
+import styles from "@/components/Title/Title.module.scss";
+
+interface TitleProps {
+  name: string;
+  heading: string;
+}
+
+export default function Title({ name, heading }: TitleProps) {
+  return (
+    <div
+      className={`${
+        heading === "h1"
+          ? styles["title-h1"]
+          : heading === "h2"
+          ? styles["title-h2"]
+          : styles["title-h3"]
+      }`}
+    >
+      <p>{name}</p>
+    </div>
+  );
+}
