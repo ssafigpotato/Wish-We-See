@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4a23a5b0e7ed8ca89a599942e706f0546d83bbbe8370257ab3e6db4aab8ced0e
-size 689
+@import '@/assets/styles/styles.scss';
+
+.header-container {
+  z-index: 1000;
+  box-sizing: border-box;
+  background-color: $white;
+  position: fixed;
+  width: calc(100% - 32px);
+  height: 4rem;
+  align-content: center;
+  
+  .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid $black;
+    
+
+    .logo {
+      align-content: center;
+    }
+    
+    .menu {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
+
+.headerarea {
+  z-index: 500;
+  box-sizing: border-box;
+  background-color: $white;
+  position: fixed;
+  width: 100%;
+  height: 4.1rem;
+}
+
+.logoutButton {
+  border: none;
+  background-color: $white;
+  cursor: pointer;
+}

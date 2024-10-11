@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:97943d170d3959bb9daaa9f6b4cdf349df87698af31505063792b5a7a23c8c5a
-size 233
+package com.ssafy.missing_back.domain.cautions.service;
+
+import com.ssafy.missing_back.domain.cautions.model.dto.request.SituationRequest;
+
+public interface SituationService {
+	void EndSituation(SituationRequest situationRequest);
+}

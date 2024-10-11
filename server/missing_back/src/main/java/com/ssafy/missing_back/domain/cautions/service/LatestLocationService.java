@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c17ee00d4db1aaf6b2dfebfd7c47e2e108786410c691c7c663bc8ed25267167c
-size 222
+package com.ssafy.missing_back.domain.cautions.service;
+
+import com.ssafy.missing_back.domain.cautions.model.dto.request.GpsRequest;
+
+public interface LatestLocationService {
+	void LatestLocation(GpsRequest gpsRequest);
+}

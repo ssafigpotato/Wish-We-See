@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7d252340aa51ca0deaba3272fed355ac4e68380a438e08a2e594c4ba646251c0
-size 274
+from pinecone import Pinecone, ServerlessSpec
+import os
+# from dotenv import load_dotenv
+# load_dotenv()
+
+pinecone_api_key = os.getenv("PINECONE_API_KEY")
+
+pc = Pinecone(api_key=pinecone_api_key)
+
+index_name = 'missing-image-embedding'
+
+pinecone_index = pc.Index(index_name)

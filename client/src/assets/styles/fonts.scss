@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:042312441ea10321ae1c8de7abcff990644744c654323b1a6f940b943648ac5b
-size 783
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+    @font-face {
+        font-family: $name;
+        src: url('#{$file}.woff2') format('woff2'),
+        url('#{$file}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+$font-path: '/fonts/Pretendard';
+
+$light-weight: 300;
+$regular-weight: 400;
+$medium-weight: 500;
+$semi-bold-weight: 700;
+$bold-weight: 800;
+
+@include font-face('Pretendard', $font-path + '-Light', $light-weight);
+@include font-face('Pretendard', $font-path + '-Regular', $regular-weight);
+@include font-face('Pretendard', $font-path + '-Medium', $medium-weight);
+@include font-face('Pretendard', $font-path + '-SemiBold', $semi-bold-weight);
+@include font-face('Pretendard', $font-path + '-Bold', $bold-weight);

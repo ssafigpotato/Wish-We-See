@@ -1,3 +1,68 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7eb940b572b049edb6380036a3c48965b3c1ec9613d76a3a6a9689e95d780e15
-size 925
+@import '@/assets/styles/styles.scss';
+
+.container{
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4.5rem;
+  padding-bottom: 16px;
+}
+
+.main-report {
+  height: auto;
+  min-height: 4rem;
+  padding: 10px 0px;
+}
+
+
+.report {
+  height: auto;
+  min-height: 4rem;
+  padding: 10px 0px;
+  display: flex;
+  overflow-x: scroll;
+  gap: 10px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  min-width: 100px;
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 10%);
+  justify-content: center;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.percent {
+  font-weight: $bold-weight;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.high {
+  @extend .percent;
+  color: $red;
+}
+
+.meddle {
+  @extend .percent;
+  color: $blue;
+}
+
+.low {
+  @extend .percent;
+  color: gray;
+}

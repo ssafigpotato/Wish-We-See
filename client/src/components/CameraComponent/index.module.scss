@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:51be355bb662c17d302cc206871ceeaa3f716da47157c3399b945859f8e67323
-size 727
+@import "@/assets/styles/styles.scss";
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.button {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  border-radius: 20px;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-blue;
+  &--red {
+    background-color: $red;
+  }
+}
+
+.text-area {
+  width: 100%;
+  height: 140px;
+}
+
+.text-title {
+  font-size: 24px;
+  font-weight: $bold-weight;
+  color: $black;
+  margin: 16px 0px;
+}
+
+/* 터치 영역에 touch-action: none을 추가 */
+.touch-area {
+  position: relative;
+  display: inline-block;
+  touch-action: none;
+  /* 터치 이벤트로 인한 스크롤 방지 */
+}

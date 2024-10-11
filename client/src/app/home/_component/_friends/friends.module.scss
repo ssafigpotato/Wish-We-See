@@ -1,3 +1,46 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:63034b373a7fdcfa3730f1b6cc0107d955aad7b7e3573e21148dfdcf67a1e4f5
-size 652
+@import "@/assets/styles/styles.scss";
+
+.friends {
+  box-sizing: border-box;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px;
+  margin-bottom: 5px;
+  border: none;
+}
+
+.img {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: $semi-bold-weight;
+}
+
+.status {
+  font-size: 10px;
+  font-weight: $regular-weight;
+}
+
+.red {
+  background-color: $red;
+  color: $white;
+}
+
+.blue {
+  background-color: $light-blue;
+  color: $white;
+}
+
+.yellow {
+  background-color: $yellow;
+  color: $black;
+}

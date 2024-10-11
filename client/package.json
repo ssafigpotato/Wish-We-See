@@ -1,3 +1,48 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:70243337c7344269b53627521bf3b8655d23d2535d8da03c212faea28d9586c8
-size 1320
+{
+  "name": "위시",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@tanstack/react-query": "^5.56.2",
+    "axios": "^1.7.7",
+    "critters": "^0.0.24",
+    "firebase": "^10.14.0",
+    "next": "14.2.13",
+    "next-pwa": "^5.6.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.3.0",
+    "react-kakao-maps-sdk": "^1.1.27",
+    "zustand": "^5.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-essentials": "^8.3.2",
+    "@storybook/addon-interactions": "^8.3.2",
+    "@storybook/addon-links": "^8.3.2",
+    "@storybook/addon-onboarding": "^8.3.2",
+    "@storybook/blocks": "^8.3.2",
+    "@storybook/nextjs": "^8.3.2",
+    "@storybook/react": "^8.3.2",
+    "@storybook/test": "^8.3.2",
+    "@tanstack/eslint-plugin-query": "^5.57.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.13",
+    "eslint-plugin-storybook": "^0.8.0",
+    "sass": "^1.79.3",
+    "storybook": "^8.3.2",
+    "typescript": "^5"
+  }
+}

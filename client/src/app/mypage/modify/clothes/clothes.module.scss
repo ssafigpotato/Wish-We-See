@@ -1,3 +1,144 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ae92965bebd349cb829a06f8ad6b544da14cd7c4408a2c7c4fdef2fcd14a5061
-size 2908
+@import "@/assets/styles/styles.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: $black;
+  font-weight: $semi-bold-weight;
+  font-size: 20px;
+  height: 100vh;
+  padding: 0 16px;
+  position: relative;
+
+  * {
+    // border: 1px solid pink;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .back {
+    display: flex;
+    justify-content: start;
+    font-size: 17px;
+    font-weight: $regular-weight;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: $white;
+    padding: 10px 0;
+    border: none;
+    padding: 4.5rem 0 0 0;
+    text-decoration: none;
+
+    a:visited {
+      color: $black;
+    }
+  }
+
+  label {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  .insert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5rem;
+
+    div {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    background-color: $white; // 원하는 배경 색상
+    color: $black; // 글자 색상
+    border: none;
+    border-radius: 8px; // 모서리 둥글게
+    cursor: pointer; // 커서 모양 변경
+    display: inline-block; // 버튼처럼 보이도록 설정
+    margin: 0;
+
+    svg {
+      width: 2em;
+      height: 2rem;
+      color: $blue;
+    }
+  }
+
+  input[type="file"] {
+    display: none; // input 숨기기
+  }
+
+  .preview {
+    background-color: $light-gray; // 기본 회색 배경
+    display: flex; // flex 사용하여 중앙 정렬
+    align-items: center; // 세로 중앙 정렬
+    justify-content: center; // 가로 중앙 정렬
+    margin-top: 2px; // 미리보기 이미지와 버튼 간격
+    width: 23rem;
+    height: 15rem;
+
+    img {
+      //   width: 23.3rem;
+      //   height: 15rem;
+      max-width: 100%; // 이미지 최대 너비
+      max-height: 100%; // 이미지 최대 높이
+      border-radius: 8px; // 모서리 둥글게
+      //   display: none; // 기본적으로 이미지 숨기기
+    }
+  }
+}
+
+.clothe {
+  display: flex;
+  flex-direction: column;
+  div {
+    font-size: 15px;
+    font-weight: $light-weight;
+  }
+  input {
+    background-color: $light-gray;
+    width: 21.1rem;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+  }
+}
+
+.submitbutton {
+  display: flex;
+  border: none;
+  background-color: $light-blue;
+  justify-content: center;
+  border-radius: 10px;
+  width: 23rem;
+  height: 2.5rem;
+  color: $white;
+  font-weight: $semi-bold-weight;
+  font-size: 17px;
+  padding: 5px 0;
+  margin: 10px 0;
+  // margin-top: auto;
+  // position: absolute; // 절대 위치 설정
+  // bottom: 15px; // 아래에서 10px 떨어진 위치
+}

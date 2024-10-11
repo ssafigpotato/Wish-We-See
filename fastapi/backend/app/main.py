@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eef3af14054a93f6d4f73e40254248c77433e2830ebee2c3145a56d4410453dc
-size 576
+import os
+from dotenv import load_dotenv
+load_dotenv()
+os.environ['CUDA_VISIBLE_DEVICES'] = '6'
+
+from fastapi import FastAPI
+from api import emergency_detection, vectorizer, vector_comparator
+# import core.emergency_classification_by_voice.service
+from dotenv import load_dotenv
+
+load_dotenv()
+
+app = FastAPI()
+
+
+app.include_router(emergency_detection.router, prefix="/emergency", tags=["Emergency Detection"])
+app.include_router(vectorizer.router, prefix="/vectorizer", tags=["Vectorizer"])
+app.include_router(vector_comparator.router, prefix="/compare", tags=["Comparator"])

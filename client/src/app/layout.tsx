@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9be9fc84f8cb2e7aec5da0bc5f83aff61704e7ed7d54bc336d28d5c8cf6faac8
-size 959
+import "@/assets/styles/index.css";
+import { SensorProvider } from "@/context/useSensorContext";
+import { UserProvider } from "@/context/useUserContext";
+
+export const metadata = {
+  title: "위시",
+  description: "범죄예방부터 실종자 찾기까지 위시",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="ko">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>위시</title>
+        <meta name="description" content="범죄예방부터 실종자 찾기까지 위시" />
+        <link rel="manifest" href="/manifest.json" />
+        {/* Favicon 설정 */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </head>
+      <body>
+        <SensorProvider>
+          <UserProvider>{children}</UserProvider>
+        </SensorProvider>
+      </body>
+    </html>
+  );
+}

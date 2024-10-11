@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b60c74764f3a1edc1ea7351a20cae7347512b40eeb78e58dce9bc735a67ed5eb
-size 565
+import React from "react";
+import styles from "./index.module.scss";
+import { CiUser, CiLock } from "react-icons/ci";
+
+interface LoginInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  type: "user" | "password";
+}
+
+export default function LoginInput({ type = "password", ...props }: LoginInputProps) {
+  return (
+    <div className={styles.container}>
+      {type === "password" ? <CiLock size="32px" /> : <CiUser size="32px" />}
+      <input className={styles.input} type={type === "password" ? "password" : "text"} {...props} />
+    </div>
+  );
+}

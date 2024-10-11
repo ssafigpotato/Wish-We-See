@@ -1,3 +1,86 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c36cf199481f46f06265f70571532192331f3152a9cb6116e3c46e67ac31905d
-size 1536
+@import "@/assets/styles/styles.scss";
+
+.profile-container {
+  width: full;
+  display: flex;
+  border-radius: 15px;
+  box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+  padding: 12px;
+  gap: 24px;
+  justify-content: space-between;
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+  }
+
+  .profile-content-container {
+    gap: 17px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .profile-detail-container {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-basic {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .profile-name {
+      font-size: 18px;
+      font-weight: $bold-weight;
+    }
+
+    .profile-age {
+      font-size: 12px;
+      font-weight: $regular-weight;
+    }
+  }
+
+  .profile-detail {
+    display: flex;
+    gap: 10px;
+
+    .profile-detail-title {
+      color: #6f6f6f;
+      font-size: 12px;
+      align-content: center;
+    }
+
+    .profile-detail-content {
+      font-size: 12px;
+      font-weight: $medium-weight;
+    }
+
+    .profile-detail-box-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .profile-detail-box {
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: $regular-weight;
+      border-radius: 8px;
+      padding: 4px 6px;
+    }
+
+    .profile-detail-box-yellow {
+      @extend .profile-detail-box;
+      background-color: $yellow;
+    }
+
+    .profile-detail-box-lightblue {
+      @extend .profile-detail-box;
+      background-color: #b3e5fc;
+    }
+  }
+}

@@ -1,3 +1,97 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:335bbda0ab89ad3188ccea12a85e94a446fa7242c8f9634b27175d65a4351aa5
-size 1734
+@import "@/assets/styles/styles.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  //   align-items: stretch;
+  color: $black;
+  font-weight: $semi-bold-weight;
+  font-size: 20px;
+  //   height: 20rem;
+  padding-top: 4.5rem;
+
+  * {
+    // border: 1px solid green;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  height: 9rem;
+  margin-bottom: 10px;
+
+  .sensor {
+    display: flex;
+    flex-direction: column;
+    background-color: $blue;
+    width: 9.8rem;
+    border-radius: 0.5rem;
+    padding: 10px;
+    color: $white;
+  }
+
+  .friends {
+    display: flex;
+    flex-direction: column;
+    background-color: $light-gray;
+    width: 9.8rem;
+    border-radius: 0.5rem;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden; /* 가로 스크롤 비활성화 */
+
+    ::-webkit-scrollbar {
+      display: none; /* 크롬, 사파리 등 웹킷 브라우저용 (모바일 포함) */
+    }
+
+    -ms-overflow-style: none; /* IE, Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  .box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .safezone {
+    font-weight: $medium-weight;
+    font-size: 15px;
+    margin-bottom: 10px;
+
+    &.warning {
+      color: $red; // 위험 시 빨간색 글씨
+    }
+  }
+  .reallocation {
+    font-weight: $light-weight;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .map {
+    height: 20rem;
+  }
+}
+
+.missinglist {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  .info {
+    display: flex;
+    justify-content: end;
+    font-weight: $light-weight;
+    font-size: 15px;
+  }
+}

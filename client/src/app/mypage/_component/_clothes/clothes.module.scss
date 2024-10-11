@@ -1,3 +1,49 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bfb0d8b7987036755a47965146e7170c2319509bbd4ef1c8232248d69da09984
-size 846
+@import "@/assets/styles/styles.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  height: 7rem;
+  margin-bottom: 5px;
+}
+
+.img {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.box {
+  width: 13.5rem;
+  display: grid;
+  grid-template-columns: 1.2fr 3fr;
+  grid-template-rows: 1fr 1fr 3fr;
+  font-size: 14px;
+  row-gap: 5px;
+
+  :nth-child(2n-1) {
+    color: $gray;
+    font-weight: $regular-weight;
+  }
+
+  :nth-child(2) {
+    display: inline-block;
+    background-color: $yellow;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 2px 10px;
+    color: $gray;
+  }
+
+  :nth-child(4) {
+    display: inline-block;
+    background-color: #87ceeb;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 2px 10px;
+    color: $gray;
+  }
+}

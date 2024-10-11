@@ -1,3 +1,57 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6bb64b394c9eb7d7f8e0eec80632d7bc004a38343d6b37f6adca5da8f7c3a038
-size 980
+@import "@/assets/styles/styles.scss";
+
+.container {
+  display: flex;
+  align-content: space-between;
+  //   background-color: $white;
+  // 센서 총 4개
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: $black;
+  height: 6rem;
+  padding: 3px;
+}
+
+.sensorbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 4.3rem;
+  height: 2.5rem;
+  padding: 8px 12px;
+  border-radius: 0.5rem;
+  background-color: $white;
+  box-shadow: 1px 1px 5px $dark-blue;
+}
+
+.title {
+  font-weight: $medium-weight;
+  font-size: 10px;
+  // margin-bottom: 3px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+
+  .light {
+    border-radius: 20rem;
+    width: 9px;
+    height: 9px;
+  }
+
+  .greenLight {
+    background-color: $green;
+  }
+
+  .redLight {
+    background-color: $red;
+  }
+
+  .goodorbad {
+    font-weight: $regular-weight;
+    font-size: 8px;
+    // 상태에 따라 바뀔 수 있도록 수정 필요
+  }
+}

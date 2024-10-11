@@ -1,3 +1,50 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8ab8c17617642ff76798bf1658e21f5bed1fbbe4f01b2fba0346da37df1b208b
-size 810
+@import "@/assets/styles/styles.scss";
+
+.button-container {
+  width: full;
+  height: 3rem;
+  text-align: center;
+  align-content: center;
+  display: flex;
+  gap: 55px;
+
+  .button {
+    color: $white;
+    border-radius: 20px;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-content: center;
+    user-select: none;
+    box-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+
+    &:active {
+      transform: scale(0.98);
+      // filter: saturate(120%);
+    }
+  }
+
+  .button-inner {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .button-text {
+    align-content: center;
+  }
+
+  .blue-button {
+    @extend .button;
+    background-color: $blue;
+  }
+
+  .red-button {
+    @extend .button;
+    background-color: $red;
+  }
+
+  .light-blue-button {
+    @extend .button;
+    background-color: $light-blue;
+  }
+}
