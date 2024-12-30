@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:515464197b4feb403b48158727af13e79e5c03a31258529e8589aa8eea3e1900
-size 611
+package com.ssafy.missing_back.global.auth.jwt.dto;
+
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+
+public class SecurityUtil {
+	// 어떤 회원이 API를 요청했는지 쉽게 조회할 수 있는 클래스
+	public static String getCurrentUsername() {
+		final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		if (authentication == null || authentication.getName() == null) {
+			throw new RuntimeException("No authentication information.");
+		}
+		return authentication.getName();
+	}
+}

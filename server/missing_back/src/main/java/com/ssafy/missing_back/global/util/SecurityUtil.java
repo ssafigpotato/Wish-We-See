@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b8a48a9124cf4a6a924575640fe35f6c4ed4c82eeed18ee4952dce6791178b9
-size 524
+package com.ssafy.missing_back.global.util;
+
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+
+public class SecurityUtil {
+	public static String getCurrentUserName() {
+		final Authentication authentication =
+			SecurityContextHolder.getContext().getAuthentication();
+		if (authentication == null || authentication.getName() == null) {
+			throw new RuntimeException("No authentication information");
+		}
+		return authentication.getName();
+	}
+
+}

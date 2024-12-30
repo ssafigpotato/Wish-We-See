@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c8bf32fcaa9dbf1be901eaffafdecb3ca5ba7101e87eddcd0677b3980be7b6d6
-size 538
+package com.ssafy.missing_back.domain.missing_persons.service;
+
+import java.io.IOException;
+
+import org.springframework.web.multipart.MultipartFile;
+
+import com.ssafy.missing_back.domain.missing_persons.model.dto.request.AdditionalInfoRequest;
+import com.ssafy.missing_back.domain.missing_persons.model.dto.response.AdditionalInfoCreateResponse;
+
+public interface AdditionalInfoService {
+
+	AdditionalInfoCreateResponse createAdditionalInfo(AdditionalInfoRequest additionalInfoRequest,
+		MultipartFile additionalImg) throws IOException;
+}

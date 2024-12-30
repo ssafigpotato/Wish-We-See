@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bf4ba261cab09b2b6dc877913aee3b1c4a42dc35c0fdbe965794c85747298e45
-size 775
+package com.ssafy.missing_back.domain.users.model.dto.response;
+
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
+public class MyPageResponse {
+
+	@JsonProperty("user_basic_info")
+	private UserFindResponse userFindResponse;
+
+	@JsonProperty("user_additional_info")
+	private AppearanceResponse appearanceResponse;
+
+	@JsonProperty("user_contact_info")
+	private List<ContactResponse> contacts;
+
+	public static MyPageResponse toDto(UserFindResponse userFindResponse, AppearanceResponse appearanceResponse,
+		List<ContactResponse> contacts) {
+		return MyPageResponse.builder().userFindResponse(userFindResponse).appearanceResponse(appearanceResponse)
+			.contacts(contacts).build();
+	}
+
+}

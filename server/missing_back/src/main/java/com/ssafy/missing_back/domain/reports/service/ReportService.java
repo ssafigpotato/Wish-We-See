@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6f2d6e28e25d2431c5ff3367dd13b91807d38be53579c0f9257377958b5df9cf
-size 762
+package com.ssafy.missing_back.domain.reports.service;
+
+import java.io.IOException;
+
+import org.springframework.web.multipart.MultipartFile;
+
+import com.ssafy.missing_back.domain.reports.model.dto.request.ReportCreateRequest;
+import com.ssafy.missing_back.domain.reports.model.dto.response.ReportDetailResponse;
+import com.ssafy.missing_back.domain.reports.model.dto.response.ReportListResponse;
+import com.ssafy.missing_back.domain.reports.model.dto.response.ReportResponse;
+
+public interface ReportService {
+
+	ReportListResponse getReports(Long dangerousSituationId);
+
+	ReportDetailResponse getReport(Long reportId);
+
+	ReportResponse createReport(Long dangerousSituationId, ReportCreateRequest reportCreateRequest,
+		MultipartFile image) throws IOException;
+}

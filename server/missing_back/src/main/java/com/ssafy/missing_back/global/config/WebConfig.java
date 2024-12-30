@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:538c6739bb6f0d2cb939f89296f33447f58125930de13e4ca09a1f9f6664d359
-size 460
+package com.ssafy.missing_back.global.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+
+	@Override
+	public void configurePathMatch(PathMatchConfigurer configurer) {
+		configurer.addPathPrefix("api", c -> true);
+	}
+
+}

@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e5b0d58605ab59ff0c52d17ebfc73e0fc1541fb79d273484d023cedc8a8e073c
-size 554
+package com.ssafy.missing_back.global.config;
+
+import java.time.Duration;
+
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+@Configuration
+public class RestTemplateConfig {
+
+	@Bean
+	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+		return builder
+			.setConnectTimeout(Duration.ofSeconds(180))
+			.setReadTimeout(Duration.ofSeconds(180))
+			.build();
+	}
+
+}

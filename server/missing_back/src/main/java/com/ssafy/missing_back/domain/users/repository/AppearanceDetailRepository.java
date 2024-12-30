@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:10711f63ab50aab88fcb0212b98bf1d3f09e9e5c4e41155aa1d33fce39a72bd5
-size 410
+package com.ssafy.missing_back.domain.users.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.ssafy.missing_back.domain.users.model.entity.AppearanceDetail;
+
+public interface AppearanceDetailRepository extends JpaRepository<AppearanceDetail, Long> {
+
+	AppearanceDetail findByUserId(Long userId);
+
+	boolean existsByUserId(Long userId);
+
+	void deleteByUserId(Long userId);
+}
